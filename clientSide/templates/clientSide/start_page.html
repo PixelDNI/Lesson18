@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<h1>Products List</h1>
+    {% for product in object_list %}
+        <div>
+            {{product.name}}
+            <p>{{product.price}} $</p>
+               {{product.show_status}}
+            <a href="{% url 'show_product' product.slug %}">More</a>
+        </div>
+
+    {% endfor %}
+</body>
+</html>

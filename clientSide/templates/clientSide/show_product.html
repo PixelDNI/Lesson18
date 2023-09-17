@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Page</title>
+</head>
+<body>
+  {{product.name}}
+  {{product.description}}
+
+  {{product.price}} $
+  <form method="post">
+      {% csrf_token %}
+    <button type="submit">Buy</button>
+
+  </form>
+</body>
+</html>
